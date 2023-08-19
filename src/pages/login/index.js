@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Form, Button, Container } from 'react-bootstrap';
 import axios from 'axios';
-import Link from 'next/link';
+
 
 export default function Login() {
   const router = useRouter();
@@ -23,7 +23,7 @@ export default function Login() {
         document.cookie = `token=${response.data.token}`;
         router.push('/dashboard'); // Thay thế đường dẫn bằng trang sau khi đăng nhập thành công
       }else{
-        
+
       }
     } catch (error) {
       console.error('Login failed:', error);
